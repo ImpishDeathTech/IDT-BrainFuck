@@ -46,16 +46,16 @@
 
 #define BF_FILE_SUFFIX ".bf"
 
-#define BF_LEFT    '<'
-#define BF_RIGHT   '>'
-#define BF_ADD     '+'
-#define BF_SUB     '-'
-#define BF_OUT     '.'
-#define BF_IN      ','
-#define BF_BEG     '['
-#define BF_END     ']'
-#define BF_COMMENT '#'
-#define BF_NULL    '\0'
+#define BF_LEFT  '<'
+#define BF_RIGHT '>'
+#define BF_ADD   '+'
+#define BF_SUB   '-'
+#define BF_OUT   '.'
+#define BF_IN    ','
+#define BF_BEG   '['
+#define BF_END   ']'
+#define BF_NULL  '\0'
+#define BF_MAX   0xFF
 
 #define BF_REPL_CLEAR '*'
 #define BF_REPL_EXEC  '$'
@@ -63,6 +63,7 @@
 #define BF_REPL_QUIT  '!'
 #define BF_REPL_HELP  "?"
 #define BF_REPL_MODE  "%"
+#define BF_COMMENT    '#'
 
 #define BF_FUCKUP_SEG_FAULT "[FUCKUP]: Seg Fault! Can't pass addr:"
 #define BF_FUCKUP_FILE      "[FUCKUP]: File '"
@@ -98,7 +99,7 @@ switches:
 )_help_",
                  BF_REPL_HELP_MESSAGE =
 R"_repl_help_(
-IDT-BrainFuck REPL Commands:
+REPL Commands:
 
     $ : Execute code in command execution mode.
         - This allows you to write out several 
