@@ -69,5 +69,19 @@ namespace bf {
         
         else m_ptr = m_tail;
     }
+    
+    void CellList::addOne() {
+        if (*m_ptr == BF_MAX)
+            *m_ptr = BF_NULL;
+        
+        else (*m_ptr)++;
+    }
+    
+    void CellList::subOne() {
+        if (*m_ptr == BF_NULL)
+            *m_ptr = BF_MAX;
+        
+        else (*m_ptr)--;
+    }
             
 }
