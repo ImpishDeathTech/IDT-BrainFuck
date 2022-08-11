@@ -1,6 +1,12 @@
 # IDT-BrainFuck Interpreter
 ### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
-#### Note: the size switch is still disfunctional, I admittedly haven't spent much time on that yet, will be patched soon.
+
+#### I was bored, so I decided to throw together a brainfuck interpreter of my own design.
+#### It's turned out pretty nice so far, so I thought I'd share it with the world. Enjoy
+#### a little product of my insanity. ;3
+
+Note: **Do _not_** set the cell list size under 1014, or you will get undefined behavior.
+      I will try to patch this bug in future builds.
 
 ### Usage:
 
@@ -55,5 +61,4 @@ I've written a simple install shell script for unix and unix-like users. All you
 ```sh
 git clone https://github.com/ImpishDeathTech/IDT-BrainFuck.git && cd IDT-BrainFuck
 chmod +x install.sh && ./install.sh
-```    
-    
+``` 
