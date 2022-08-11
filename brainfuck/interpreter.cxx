@@ -111,7 +111,7 @@ namespace bf {
                         codeIndex++;
                     }
                     break;
-              
+                
                 case BF_COMMENT:
                     while (code[++codeIndex] != '\n');
                     break;
@@ -141,7 +141,7 @@ namespace bf {
 #endif 
             }
             else if (input[0] == BF_REPL_CHECK) {
-                std::cout << "\n[ADDR]: " << m_cells->address() << ")\n[DATA]: " << std::hex << (std::uint16_t)m_cells->data() << "\n\n";
+                std::cout << "\n[ADDR]: " << m_cells->address() << "\n[DATA]: " << std::hex << (std::uint16_t)m_cells->data() << "\n\n";
 
                 for (char& c : input) {
                     if (c == BF_REPL_CHECK)
@@ -154,10 +154,11 @@ namespace bf {
                 repl_help();
             
             else if (input == BF_REPL_MODE) {
-                if (autoEval = true)
+                if (autoEval)
                     autoEval = false;
                 
-                else autoEval = true;
+                else if (!autoEval) 
+                    autoEval = true;
             }
             else if (autoEval && input != "") {
                 std::cout << eval(input) << std::endl;
