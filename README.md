@@ -2,7 +2,7 @@
 ### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
 #### The size switch is still disfunctional, may be removed in future versions
 
-Useage:
+### Useage:
 
     Type 'bf' alone in the terminal to run interactive interpreter
     
@@ -12,14 +12,38 @@ Useage:
     
     `-i`, `-o`, and `-s` can be used in combination, `-a` & `-h` are to be used on their own.
     
-Switches:
+### Switches:
     
-    -i : bf <file name>.bf -i <input file>
+    -i : Set the input file path 
+        bf <file name>.bf -i <input file>
+        
+        - note that this is the input you read with the ',' command,
+          not the script you are interpreting - that should simply 
+          be the first argument of the program call
     
-    -o : bf <file name>.bf -o <output file>
+    -o : Set the output file path 
+        bf <file name>.bf -o <output file>
     
-    -s : bf <file name>.bf -s <array size> (currently broken)
+    -s : Set the size of the cell array (currently broken)
+        bf <file name>.bf -s <array size>
     
-    -a : start the interpreter in auto eval REPL mode
+    -a : Start the interpreter in auto eval REPL mode
+        bf -a
     
-    -h : bf -h (prints this message)
+    -h : Prints this message
+        bf -h
+
+### REPL Commands:
+    
+    $ : Execute code in command execution mode.
+        - This allows you to write out several 
+          lines beforeexecuting a block of brainfuck code
+            
+    % : Switch between auto execution and command execution
+            
+    * : Clears the REPL terminal
+
+    @ : Show the current memory address and the contained value 
+        - both are displayed in hexadecimal
+
+    ! : Exit interpreter
