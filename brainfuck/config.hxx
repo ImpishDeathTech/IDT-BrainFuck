@@ -42,19 +42,20 @@
 
 #define BF_VERSION_MAJOR 1
 #define BF_VERSION_MINOR 3
-#define BF_VERSION_PATCH 0
+#define BF_VERSION_PATCH 1
 
 #define BF_FILE_SUFFIX ".bf"
 
-#define BF_LEFT  '<'
-#define BF_RIGHT '>'
-#define BF_ADD   '+'
-#define BF_SUB   '-'
-#define BF_OUT   '.'
-#define BF_IN    ','
-#define BF_BEG   '['
-#define BF_END   ']'
-#define BF_NULL  '\0'
+#define BF_LEFT    '<'
+#define BF_RIGHT   '>'
+#define BF_ADD     '+'
+#define BF_SUB     '-'
+#define BF_OUT     '.'
+#define BF_IN      ','
+#define BF_BEG     '['
+#define BF_END     ']'
+#define BF_COMMENT '#'
+#define BF_NULL    '\0'
 
 #define BF_REPL_CLEAR '*'
 #define BF_REPL_EXEC  '$'
