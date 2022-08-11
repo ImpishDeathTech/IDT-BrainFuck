@@ -10,7 +10,7 @@ Type 'bf <file path>.bf' to run a brainfuck script
 
 Add switches to tell the interpreter what you want to do.
     
-`-i`, `-o`, and `-s` can be used in combination, `-a` & `-h` are to be used on their own.
+`-i`  `-o` & `-s` can be used in combination, `-a` & `-h` are to be used on their own.
     
 ### Switches:
     
