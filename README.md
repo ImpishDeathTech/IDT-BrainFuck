@@ -30,7 +30,7 @@ Add switches to tell the interpreter what you want to do.
     -o : Set the output file path 
         bf <file name>.bf -o <output file>
     
-    -s : Set the size of the cell array (currently broken)
+    -s : Set the size of the byte cell array (1014+)
         bf <file name>.bf -s <array size>
     
     -a : Start the interpreter in auto eval REPL mode
