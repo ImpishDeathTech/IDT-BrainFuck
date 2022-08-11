@@ -39,7 +39,7 @@
 
 namespace bf {
     class CellList {
-        std::size_t   m_size  { 1201 };
+        std::size_t   m_size  { 30000 };
         std::uint8_t *m_cells { nullptr },
                      *m_ptr   { nullptr },
                      *m_head  { nullptr },
@@ -54,8 +54,8 @@ namespace bf {
             void          shiftLeft();
             void          shiftRight();
 
-            void          addOne()              { (*m_ptr)++; }
-            void          subOne()              { (*m_ptr)--; }
+            void          addOne();
+            void          subOne();
             std::uint8_t& data()                { return *m_ptr; }
             void*         address()             { return m_ptr; }
 
