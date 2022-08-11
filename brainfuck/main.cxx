@@ -74,6 +74,7 @@ int main(int ac, char** av) {
             else {
                 std::ofstream fp(output, std::ios::trunc);
                 fp << brainfuck.eval(code);
+                fp.close();
             }
         }
     }
