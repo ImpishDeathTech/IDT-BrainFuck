@@ -111,6 +111,10 @@ namespace bf {
                         codeIndex++;
                     }
                     break;
+              
+                case '#':
+                    while (code[++codeIndex] != '\n');
+                    break;
             }
         }
         return output.str();
