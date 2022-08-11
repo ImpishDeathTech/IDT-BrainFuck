@@ -49,7 +49,8 @@
     ! : Exit interpreter
     
 ### Installing:
-    I've written a simple install shell script for unix and unix-like users. All you need to do is:
+
+I've written a simple install shell script for unix and unix-like users. All you need to do is:
     
 ```sh
 git clone https://github.com/ImpishDeathTech/IDT-BrainFuck.git && cd IDT-BrainFuck
