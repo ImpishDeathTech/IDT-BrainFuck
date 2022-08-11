@@ -51,6 +51,8 @@
 ### Installing:
     I've written a simple install shell script for unix and unix-like users. All you need to do is:
     
-    git clone https://github.com/ImpishDeathTech/IDT-BrainFuck.git && cd IDT-BrainFuck && chmod +x install.sh && ./install.sh
-    
+```sh
+git clone https://github.com/ImpishDeathTech/IDT-BrainFuck.git && cd IDT-BrainFuck
+chmod +x install.sh && ./install.sh
+```    
     
