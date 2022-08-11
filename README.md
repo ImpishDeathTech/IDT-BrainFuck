@@ -10,9 +10,9 @@ Note: **Do _not_** set the cell list size under 1014, or you will get undefined 
 
 ### Usage:
 
-Type 'bf' alone in the terminal to run interactive interpreter
+Type `bf` alone in the terminal to run interactive interpreter
     
-Type 'bf <file path>.bf' to run a brainfuck script
+Type `bf <file path>.bf` to run a brainfuck script
 
 Add switches to tell the interpreter what you want to do.
     
