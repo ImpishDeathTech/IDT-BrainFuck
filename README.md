@@ -1,9 +1,9 @@
 # IDT-BrainFuck Interpreter
 ### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
 
-#### I was bored, so I decided to throw together a brainfuck interpreter of my own design.
-#### It's turned out pretty nice so far, so I thought I'd share it with the world. Enjoy
-#### a little product of my insanity. ;3
+ I was bored, so I decided to throw together a brainfuck interpreter of my own design.
+ It's turned out pretty nice so far, so I thought I'd share it with the world. Enjoy
+ a little product of my insanity. ;3
 
 Note: **Do _not_** set the cell list size under 1014, or you will get undefined behavior.
       I will try to patch this bug in future builds.
