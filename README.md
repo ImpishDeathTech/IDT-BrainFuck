@@ -5,7 +5,7 @@
  It's turned out pretty nice so far, so I thought I'd share it with the world. Enjoy
  a little product of my insanity. ;3
 
-Note: **Do _not_** set the cell list size under 1014, or you will get undefined behavior.
+Note: **Do _not_** set the cell list size under 1014 bytes, or you will get undefined behavior.
       I will try to patch this bug in future builds.
 
 ### Usage:
