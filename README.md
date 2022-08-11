@@ -39,7 +39,7 @@
         - This allows you to write out several 
           lines before executing a block of brainfuck code
             
-    % : Switch between auto execution and command execution
+    % : Switch between auto eval and command eval
             
     * : Clears the REPL terminal
 
