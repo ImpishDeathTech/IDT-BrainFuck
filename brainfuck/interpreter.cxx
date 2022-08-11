@@ -112,7 +112,7 @@ namespace bf {
                     }
                     break;
               
-                case '#':
+                case BF_COMMENT:
                     while (code[++codeIndex] != '\n');
                     break;
             }
