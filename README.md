@@ -1,6 +1,6 @@
 # IDT-BrainFuck Interpreter
 ### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
-#### The size switch is still disfunctional, may be removed in future versions
+#### Note: the size switch is still disfunctional, I admittedly haven't spent much time on that yet, will be patched soon.
 
 ### Usage:
 
