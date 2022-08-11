@@ -35,9 +35,9 @@
 
 ### REPL Commands:
     
-    $ : Execute code in command execution mode.
+    $ : Execute code in command execution mode
         - This allows you to write out several 
-          lines beforeexecuting a block of brainfuck code
+          lines before executing a block of brainfuck code
             
     % : Switch between auto execution and command execution
             
