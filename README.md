@@ -2,7 +2,7 @@
 ### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
 #### The size switch is still disfunctional, may be removed in future versions
 
-### Useage:
+### Usage:
 
     Type 'bf' alone in the terminal to run interactive interpreter
     
