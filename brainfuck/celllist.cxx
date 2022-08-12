@@ -45,7 +45,7 @@ namespace bf {
         m_tail++;
 
         for (std::size_t i = 0; i < m_size; i++)
-            m_cells[i] = 0x00;
+            m_cells[i] = BF_NULL;
     }
 
 
@@ -58,7 +58,7 @@ namespace bf {
         m_tail++;
 
         for (std::size_t i = 0; i < m_size; i++)
-            m_cells[i] = 0x00;
+            m_cells[i] = BF_NULL;
     }
 
 
