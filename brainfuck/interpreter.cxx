@@ -77,11 +77,14 @@ namespace bf {
                     break;
 
                 case BF_OUT:
-                    output << m_cells->data();
+                    output << (char)m_cells->data();
                     break;
                 
                 case BF_IN:
-                    m_cells->data() = m_input[inputIndex++];
+                    if (m_input == "")
+                        m_cells->data() = std::cin.get();
+                    
+                    else m_cells->data() = m_input[inputIndex++];
                     break;
                 
                 case BF_BEG:
@@ -112,9 +115,17 @@ namespace bf {
                     }
                     break;
                 
-                case BF_COMMENT:
-                    while (code[++codeIndex] != '\n');
+                case BF_STATE:
+                    m_cells->printState();
                     break;
+                
+                case BF_COMMENT_BEG:
+                    while (code[codeIndex++] != BF_COMMENT_END);
+                    break;
+
+                default:
+                    break;
+
             }
         }
         return output.str();
@@ -131,7 +142,7 @@ namespace bf {
 
 
         while (input[0] != BF_REPL_QUIT) {
-            if (input[0] == BF_REPL_CLEAR) {
+            if (input[input.size() - 1] == BF_REPL_CLEAR) {
 
 #if defined(IDT_BRAINFUCK_UNIX)
                 system("clear");
@@ -139,26 +150,19 @@ namespace bf {
 #elif defined(IDT_BRAINFUCK_WINDOWS)
                 system("clr");
 #endif 
-            }
-            else if (input[0] == BF_REPL_CHECK) {
-                std::cout << "\n[ADDR]: " << m_cells->address() << "\n[DATA]: " << std::hex << (std::uint16_t)m_cells->data() << "\n\n";
-
-                for (char& c : input) {
-                    if (c == BF_REPL_CHECK)
-                        continue;
-
-                    code += c;
-                }
+                input.pop_back();
             }
             else if (input == BF_REPL_HELP)
                 repl_help();
             
-            else if (input == BF_REPL_MODE) {
+            else if (input[input.size() - 1] == BF_REPL_MODE) {
                 if (autoEval)
                     autoEval = false;
                 
                 else if (!autoEval) 
                     autoEval = true;
+                
+                input.pop_back();
             }
             else if (autoEval && input != "") {
                 std::cout << eval(input) << std::endl;
@@ -177,9 +181,14 @@ namespace bf {
                 }
             }
 
-            std::cout << "[BF]: ";
+            std::cout << BF_PROMPT;
             std::cin >> input;
         }
+    }
+
+    void Interpreter::resize(std::size_t size) {
+        delete m_cells;
+        m_cells = new CellList(size);
     }
       
 }
