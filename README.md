@@ -25,7 +25,7 @@ Add switches to tell the interpreter what you want to do.
         
         - note that this is the input you read with the ',' command,
           not the script you are interpreting - that should simply 
-          be the first argument of the program call
+          be the first argument of the program call suffixed with '.bf'
     
     -o : Set the output file path 
         bf <file name>.bf -o <output file>
