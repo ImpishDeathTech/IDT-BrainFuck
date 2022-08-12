@@ -41,9 +41,9 @@ Add switches to tell the interpreter what you want to do.
 
 ### REPL Commands:
     
-    $ : Execute code in command execution mode
-        - This allows you to write out several 
-          lines before executing a block of brainfuck code
+    $ : Execute code (for command eval mode)
+        - This mode allows you to write out several 
+          lines before executing a block of brainfuck code.
             
     % : Switch between auto eval and command eval
             
