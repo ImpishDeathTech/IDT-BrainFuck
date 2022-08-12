@@ -33,55 +33,68 @@
  */
 
 #include "celllist.hxx"
+#include <cmath>
+#include <iomanip>
 
 namespace bf {
     CellList::CellList() { 
         m_cells = (std::uint8_t*)malloc(m_size);
-        m_ptr   = &m_cells[m_size / 2];
+        m_ptr   = &m_cells[0];
         m_head  = &m_cells[0];
         m_tail  = &m_cells[m_size - 1];
+        m_tail++;
 
         for (std::size_t i = 0; i < m_size; i++)
             m_cells = 0x00;
     }
+
 
     CellList::CellList(std::size_t size) {
         m_size  = size;
         m_cells = (std::uint8_t*)malloc(m_size);
-        m_ptr   = &m_cells[m_size / 2];
+        m_ptr   = &m_cells[0];
         m_head  = &m_cells[0];
         m_tail  = &m_cells[m_size - 1];
+        m_tail++;
 
         for (std::size_t i = 0; i < m_size; i++)
             m_cells = 0x00;
     }
 
+
     void CellList::shiftRight() { 
-        if (m_ptr != m_tail)
+        if (m_ptr != (m_tail - 1))
             m_ptr++;
 
         else m_ptr = m_head; 
     }
 
+
     void CellList::shiftLeft()  { 
         if (m_ptr != m_head)
             m_ptr--;
         
-        else m_ptr = m_tail;
+        else m_ptr = (m_tail - 1);
     }
     
-    void CellList::addOne() {
-        if (*m_ptr == BF_MAX)
-            *m_ptr = BF_NULL;
+    void CellList::printState() {
+        std::uint8_t *ptr = m_ptr;
         
-        else (*m_ptr)++;
-    }
-    
-    void CellList::subOne() {
-        if (*m_ptr == BF_NULL)
-            *m_ptr = BF_MAX;
-        
-        else (*m_ptr)--;
-    }
+        std::cout << std::endl;
+
+        for (int i = 0; i < 10; i++) {
             
+            if (ptr == m_ptr)
+                std::cout << "{ "<< &m_ptr << " }->";
+
+            std::cout << '[' << std::setw(2) << std::setfill('0')
+                      << std::hex << (std::uint16_t)(*m_ptr++) << ']';
+
+            if (m_ptr == m_tail)
+                m_ptr = m_head;
+
+        }
+        std::cout << std::endl;
+        m_ptr = ptr;
+    }        
 }
