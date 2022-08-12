@@ -6,6 +6,14 @@
  * Copyright (c) 2022, Christopher Stephen Rafuse
  * All rights reserved.
  * 
+/*
+ * brainfuck/config.hxx
+ *
+ * BSD 3-Clause License
+ * 
+ * Copyright (c) 2022, Christopher Stephen Rafuse
+ * All rights reserved.
+ * 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *
@@ -105,7 +113,8 @@ R"_repl_help_(
 Program State:
 
     # : shows the current pointer address and the first 10 cells
-        this works in both scripts and the live interpreter
+        - This works in both scripts and the live interpreter.
+          Values are displayed in hexadecimal.
 
 REPL Commands:
 
@@ -116,9 +125,6 @@ REPL Commands:
     % : Switch between auto execution and command execution
             
     * : Clears the REPL terminal
-
-    @ : Show the current memory address and the contained value 
-        - both are displayed in hexadecimal
 
     ~ : Exit interpreter
 
@@ -135,6 +141,3 @@ REPL Commands:
 #endif
 
 #endif
-
-#endif
-
