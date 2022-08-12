@@ -98,7 +98,7 @@ switches:
     -o : Set the output file path 
         bf <file name>.bf -o <output file>
 
-    -s : Set the size of the cell array (minimum 1014 bytes)
+    -s : Set the size of the cell array (minimum 10 bytes)
         bf <file name>.bf -s <array size>
 
     -a : Start the interpreter in auto eval REPL mode
