@@ -40,6 +40,7 @@ Add switches to tell the interpreter what you want to do.
         bf -h
 
 ### REPL Commands:
+There are a small set of special commands you can use in the REPL environment. They are as follows:
     
     $ : Execute code (for command eval mode)
         - This mode allows you to write out several 
