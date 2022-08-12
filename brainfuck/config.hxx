@@ -42,9 +42,10 @@
 
 #define BF_VERSION_MAJOR 1
 #define BF_VERSION_MINOR 3
-#define BF_VERSION_PATCH 1
+#define BF_VERSION_PATCH 2
 
 #define BF_FILE_SUFFIX ".bf"
+#define BF_PROMPT      "[BF]: "
 
 #define BF_LEFT  '<'
 #define BF_RIGHT '>'
@@ -54,16 +55,18 @@
 #define BF_IN    ','
 #define BF_BEG   '['
 #define BF_END   ']'
+#define BF_STATE '#'
 #define BF_NULL  '\0'
 #define BF_MAX   0xFF
 
-#define BF_REPL_CLEAR '*'
-#define BF_REPL_EXEC  '$'
-#define BF_REPL_CHECK '@'
-#define BF_REPL_QUIT  '!'
-#define BF_REPL_HELP  "?"
-#define BF_REPL_MODE  "%"
-#define BF_COMMENT    '#'
+#define BF_REPL_CLEAR  '*'
+#define BF_REPL_EXEC   '$'
+#define BF_REPL_QUIT   '~'
+#define BF_REPL_HELP   "?"
+#define BF_REPL_MODE   '%'
+
+#define BF_COMMENT_BEG ':'
+#define BF_COMMENT_END ';'
 
 #define BF_FUCKUP_SEG_FAULT "[FUCKUP]: Seg Fault! Can't pass addr:"
 #define BF_FUCKUP_FILE      "[FUCKUP]: File '"
@@ -87,7 +90,7 @@ switches:
     -o : Set the output file path 
         bf <file name>.bf -o <output file>
 
-    -s : Set the size of the cell array (currently broken)
+    -s : Set the size of the cell array (minimum 1014 bytes)
         bf <file name>.bf -s <array size>
 
     -a : Start the interpreter in auto eval REPL mode
@@ -99,6 +102,11 @@ switches:
 )_help_",
                  BF_REPL_HELP_MESSAGE =
 R"_repl_help_(
+Program State:
+
+    # : shows the current pointer address and the first 10 cells
+        this works in both scripts and the live interpreter
+
 REPL Commands:
 
     $ : Execute code in command execution mode.
@@ -112,7 +120,7 @@ REPL Commands:
     @ : Show the current memory address and the contained value 
         - both are displayed in hexadecimal
 
-    ! : Exit interpreter
+    ~ : Exit interpreter
 
 )_repl_help_";
 
@@ -123,6 +131,8 @@ REPL Commands:
 #elif defined(_WIN32)
 #define IDT_BRAINFUCK_WINDOWS
 #include <Windows.h>
+
+#endif
 
 #endif
 
