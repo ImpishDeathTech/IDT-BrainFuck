@@ -55,6 +55,8 @@ There are a small set of special commands you can use in the REPL environment. T
 
     ! : Exit interpreter
     
+    ? : Print this list
+    
 ### Installing:
 
 I've written a simple install shell script for unix and unix-like users. All you need to do is:
