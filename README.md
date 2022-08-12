@@ -16,7 +16,7 @@ Type `bf <file path>.bf` to run a brainfuck script
 
 Add switches to tell the interpreter what you want to do.
     
-`-i`  `-o` & `-s` can be used in combination, `-a` & `-h` are to be used on their own.
+`-i`  `-o` & `-s` can be used in combination with a script execution, `-a` & `-h` are to be used on their own.
     
 ### Switches:
     
@@ -49,9 +49,6 @@ There are a small set of special commands you can use in the REPL environment. T
     % : Switch between auto eval and command eval
             
     * : Clears the REPL terminal
-
-    @ : Show the current memory address and the contained value 
-        - both are displayed in hexadecimal
 
     ! : Exit interpreter
     
