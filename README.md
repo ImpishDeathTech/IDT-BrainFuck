@@ -5,9 +5,6 @@
  It's turned out pretty nice so far, so I thought I'd share it with the world. Enjoy
  a little product of my insanity. ;3
 
-Note: **Do _not_** set the cell list size under 8300 bytes, or you will get undefined behavior.
-      I will try to patch this bug in future builds.
-
 ### Usage:
 
 Type `bf` alone in the terminal to run interactive interpreter
@@ -30,7 +27,7 @@ Add switches to tell the interpreter what you want to do.
     -o : Set the output file path 
         bf <file name>.bf -o <output file>
     
-    -s : Set the size of the byte cell array (1014+)
+    -s : Set the size of the byte cell array (minimum 10)
         bf <file name>.bf -s <array size>
     
     -a : Start the interpreter in auto eval REPL mode
