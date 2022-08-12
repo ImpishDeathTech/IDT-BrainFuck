@@ -51,10 +51,7 @@ namespace bf {
 
             bool        input(std::string filePath);
             std::string eval(std::string code);
-            void        resize(std::size_t size) {
-                delete m_cells;
-                m_cells = new CellList(size);
-            }
+            void        resize(std::size_t size);
             void        repl(bool autoEval=false);
             
 
