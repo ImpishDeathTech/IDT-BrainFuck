@@ -54,8 +54,11 @@ namespace bf {
             void          shiftLeft();
             void          shiftRight();
 
-            void          addOne();
-            void          subOne();
+            void          addOne() { (*m_ptr)++; }
+            void          subOne() { (*m_ptr)--; }
+
+            void          printState();
+
             std::uint8_t& data()                { return *m_ptr; }
             void*         address()             { return m_ptr; }
 
