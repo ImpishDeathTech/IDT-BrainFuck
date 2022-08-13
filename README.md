@@ -47,7 +47,7 @@ There are a small set of special commands you can use in the REPL environment. T
             
     * : Clears the REPL terminal
 
-    ! : Exit interpreter
+    ~ : Exit interpreter
     
     ? : Print this list
     
