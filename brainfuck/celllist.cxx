@@ -33,7 +33,6 @@
  */
 
 #include "celllist.hxx"
-#include <cmath>
 #include <iomanip>
 
 namespace bf {
