@@ -50,7 +50,12 @@ namespace bf {
 
 
     CellList::CellList(std::size_t size) {
-        m_size  = size;
+        if (size < 10) {
+            std::cerr << "[FUCKUP]: Given array size " << size << " is too small. Setting size to 10.\n";
+            m_size = 10;
+        }
+        else m_size = size;
+        
         m_cells = (std::uint8_t*)malloc(m_size);
         m_ptr   = &m_cells[0];
         m_head  = &m_cells[0];
@@ -85,16 +90,15 @@ namespace bf {
         for (int i = 0; i < 10; i++) {
             
             if (ptr == m_ptr)
-                std::cout << "{ "<< &m_ptr << " }->";
+                std::cout << "{ "<< (void*)ptr << " }->";
 
             std::cout << '[' << std::setw(2) << std::setfill('0')
-                      << std::hex << (std::uint16_t)(*m_ptr++) << ']';
+                      << std::hex << (std::uint16_t)(*ptr++) << ']';
 
-            if (m_ptr == m_tail)
-                m_ptr = m_head;
+            if (ptr == m_tail)
+                ptr = m_head;
 
         }
         std::cout << std::endl;
-        m_ptr = ptr;
     }        
 }
