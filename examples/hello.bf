@@ -10,7 +10,7 @@
 
    Just my version of the classic hello world program
 ;
-
+++++++++++.[-]
 >+++++++++[<++++++++>-]<.
 >+++++++[<++++>-]<+.
 +++++++..+++.>>
