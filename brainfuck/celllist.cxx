@@ -89,7 +89,7 @@ namespace bf {
         for (int i = 0; i < 10; i++) {
             
             if (ptr == m_ptr)
-                std::cout << "{ "<< (void*)ptr << " }->";
+                std::cout << "{ "<< (void*)ptr << " } -> ";
 
             std::cout << '[' << std::setw(2) << std::setfill('0')
                       << std::hex << (std::uint16_t)(*ptr++) << ']';
