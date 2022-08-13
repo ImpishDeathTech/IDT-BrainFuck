@@ -59,8 +59,8 @@ namespace bf {
 
             void          printState();
 
-            std::uint8_t& data()                { return *m_ptr; }
-            void*         address()             { return m_ptr; }
+            std::uint8_t& data()    { return *m_ptr; }
+            void*         address() { return m_ptr; }
 
     };
 }
