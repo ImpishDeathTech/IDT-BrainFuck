@@ -2,8 +2,7 @@
 ### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
 
  I was bored, so I decided to throw together a brainfuck interpreter of my own design.
- It's turned out pretty nice so far, so I thought I'd share it with the world. Enjoy
- a little product of my insanity. ;3
+ Enjoy a little product of my insanity. ;3
 
 ### Usage:
 
