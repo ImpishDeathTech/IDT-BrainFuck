@@ -60,6 +60,6 @@ chmod +x install.sh && ./install.sh
 ``` 
 # License
 
-This module is free software, as such, you can use, redistribute, and/or modify it under the terms of the BSD 3-Clause license.
+This program is free software, as such, you can use, redistribute, and/or modify it under the terms of the BSD 3-Clause license.
 
 See [LICENSE](https://github.com/ImpishDeathTech/IDT-BrainFuck/blob/master/LICENSE) for details.
