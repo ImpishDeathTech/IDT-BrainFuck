@@ -58,3 +58,8 @@ I've written a simple install shell script for unix and unix-like users. All you
 git clone https://github.com/ImpishDeathTech/IDT-BrainFuck.git && cd IDT-BrainFuck
 chmod +x install.sh && ./install.sh
 ``` 
+# License
+
+This module is free software, as such, you can use, redistribute, and/or modify it under the terms of the BSD 3-Clause license.
+
+See [LICENSE](https://github.com/ImpishDeathTech/IDT-BrainFuck/blob/master/LICENSE) for details.
