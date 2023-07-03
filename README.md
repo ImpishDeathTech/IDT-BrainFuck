@@ -1,5 +1,5 @@
 # IDT-BrainFuck Interpreter
-### Speedy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
+### Speedy Crappy BrainFuck Interpreter with a fair ammount of features (for a brainfuck interpreter anyway)
 
  I was bored, so I decided to throw together a brainfuck interpreter of my own design.
  Enjoy a little product of my insanity. ;3
